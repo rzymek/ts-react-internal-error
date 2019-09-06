@@ -4,119 +4,7 @@ declare module "accepts" {
     import * as React from 'react';
 
     namespace ReactPDF {
-        export interface Style {
-            //Flexbox
-
-            alignContent?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'space-between' | 'space-around',
-            alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline',
-            alignSelf?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch',
-            flex?: number,
-            flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse',
-            flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse',
-            flexFlow?: number,
-            flexGrow?: number,
-            flexShrink?: number,
-            flexBasis?: number,
-            justifyContent?: 'space-around' | 'space-between',
-            order?: number,
-
-            // Layout?:never,
-
-            bottom?: number | string,
-            display?: 'flex' | 'none',
-            left?: number,
-            position?: 'absolute' | 'relative',
-            right?: number,
-            top?: number,
-
-            // Dimension?:never,
-
-            height?: number | string,
-            maxHeight?: number | string,
-            maxWidth?: number | string,
-            minHeight?: number | string,
-            minWidth?: number | string,
-            width?: number | string,
-
-            // Color?:never,
-
-            backgroundColor?: string,
-            color?: string,
-            opacity?: number,
-
-            // Text?:never,
-
-            fontSize?: number,
-            fontFamily?: string,
-            fontStyle?: string | 'normal',
-            fontWeight?: number | 'thin' | 'hairline' | 'ultralight' | 'extralight' | 'light' | 'normal' | 'medium' | 'semibold' | 'demibold' | 'bold' | 'ultrabold' | 'extrabold' | 'heavy' | 'black',
-            letterSpacing?: number, //?
-            lineHeight?: number,
-            maxLines?: number, //?
-            textAlign?: 'left' | 'right', //?
-            textDecoration?: 'line-through' | 'underline',
-            textDecorationColor?: string,
-            textDecorationStyle?: "dashed" | "dotted" | "solid" | string, //?
-            textIndent?: any, //?
-            textOverflow?: any, //?
-            textTransform?: 'capitalize' | 'lowercase' | 'uppercase',
-
-            // Sizing/positioning?:never,
-
-            objectFit?: string,
-            objectPosition?: number | string,
-            objectPositionX?: number | string,
-            objectPositionY?: number | string,
-
-            // Margin/padding?:never,
-
-            margin?: number | string,
-            marginHorizontal?: number | string,
-            marginVertical?: number | string,
-            marginTop?: number | string,
-            marginRight?: number | string,
-            marginBottom?: number | string,
-            marginLeft?: number | string,
-            padding?: number | string,
-            paddingHorizontal?: number | string,
-            paddingVertical?: number | string,
-            paddingTop?: number | string,
-            paddingRight?: number | string,
-            paddingBottom?: number | string,
-            paddingLeft?: number | string,
-
-            // Transformations?:never,
-
-            transform?: string,
-            transformOrigin?: number | string,
-            transformOriginX?: number | string,
-            transformOriginY?: number | string,
-
-            // Borders?:never,
-
-            border?: number | string,
-            borderTop?: number | string,
-            borderTopColor?: string,
-            borderTopStyle?: "dashed" | "dotted" | "solid", // ?
-            borderTopWidth?: number | string,
-            borderRight?: never,
-            borderRightColor?: string,
-            borderRightStyle?: "dashed" | "dotted" | "solid", //?
-            borderRightWidth?: number | string,
-            borderBottom?: number | string,
-            borderBottomColor?: string,
-            borderBottomStyle?: "dashed" | "dotted" | "solid", //?
-            borderBottomWidth?: number | string,
-            borderLeft?: number | string,
-            borderLeftColor?: string,
-            borderLeftStyle?: "dashed" | "dotted" | "solid", //?
-            borderLeftWidth?: number | string,
-            borderTopLeftRadius?: number | string,
-            borderTopRightRadius?: number | string,
-            borderBottomRightRadius?: number | string,
-            borderBottomLeftRadius?: number | string,
-        }
-
+        export interface Style {}
         interface Styles {
             [key: string]: Style;
         }
@@ -464,10 +352,6 @@ declare module "accepts" {
             toString: () => string;
         };
 
-        const renderToStream: (
-            document: React.ReactElement<DocumentProps>,
-        ) => Promise<NodeJS.ReadableStream>;
-
         const renderToFile: (
             document: React.ReactElement<DocumentProps>,
             filePath: string,
@@ -477,42 +361,10 @@ declare module "accepts" {
         const render: typeof renderToFile;
     }
 
-    const Document: typeof ReactPDF.Document;
-    const Page: typeof ReactPDF.Page;
-    const View: typeof ReactPDF.View;
-    const Image: typeof ReactPDF.Image;
-    const Text: typeof ReactPDF.Text;
-    const Canvas: typeof ReactPDF.Canvas;
-    const Link: typeof ReactPDF.Link;
-    const Note: typeof ReactPDF.Note;
-    const Font: typeof ReactPDF.Font;
     const StyleSheet: typeof ReactPDF.StyleSheet;
-    const createInstance: typeof ReactPDF.createInstance;
-    const PDFRenderer: typeof ReactPDF.PDFRenderer;
-    const version: typeof ReactPDF.version;
-    const pdf: typeof ReactPDF.pdf;
-    const PDFViewer: typeof ReactPDF.PDFViewer;
-    const BlobProvider: typeof ReactPDF.BlobProvider;
-    const PDFDownloadLink: typeof ReactPDF.PDFDownloadLink;
 
-    export default ReactPDF;
+    // export default ReactPDF;
     export {
-        Document,
-        Page,
-        View,
-        Image,
-        Text,
-        Canvas,
-        Link,
-        Note,
-        Font,
         StyleSheet,
-        createInstance,
-        PDFRenderer,
-        version,
-        pdf,
-        PDFViewer,
-        BlobProvider,
-        PDFDownloadLink,
     };
 }
